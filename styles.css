@@ -11,12 +11,6 @@
 }
 
 body {
-	/* background: linear-gradient(
-		to right,
-		rgb(53, 92, 125),
-		rgb(108, 91, 123),
-		rgb(192, 108, 132)
-	); */
 	background-color: hsl(214, 9%, 15%);
 	color: #fff;
 	font-size: 1.8rem;
@@ -86,12 +80,13 @@ main {
 	max-width: 1080px;
 	margin: 0 auto;
 	padding: 0 0 4em;
+	width: 95%;
 }
 
 article {
 	background: #303a528f;
-	margin-top: 2em;
-	width: 45rem;
+	margin: 2em auto;
+	width: 40rem;
 	flex-grow: 1;
 	margin-right: 2em;
 	padding-bottom: 2em;

@@ -12,7 +12,7 @@ const updateSearchTerm = () => {
 			songContainer.removeChild(songContainer.firstChild);
 		}
 		//fetch songs from iTunes search API
-		const url = `https://itunes.apple.com/search?media=music&limit=10&term=${searchTerm}`;
+		const url = `https://itunes.apple.com/search?media=music&limit=20&term=${searchTerm}`;
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
@@ -21,8 +21,8 @@ const updateSearchTerm = () => {
 				return artists.map((result) => {
 					// declaring variables that hold created HTML elements
 					const article = document.createElement("article"),
-						artist = document.createElement("h2"),
-						song = document.createElement("p"),
+						song = document.createElement("h2"),
+						artist = document.createElement("p"),
 						img = document.createElement("img"),
 						audio = document.createElement("audio"),
 						audioSource = document.createElement("source");
@@ -35,8 +35,8 @@ const updateSearchTerm = () => {
 					audio.setAttribute("controls", "");
 
 					//appending created elements as children of the html article
-					article.appendChild(artist);
 					article.appendChild(song);
+					article.appendChild(artist);
 					article.appendChild(img);
 					article.appendChild(audio);
 					audio.appendChild(audioSource);
